@@ -1,6 +1,6 @@
 # 站点设置
-name: mokusei  
-description: This is a hexo theme 
+name: Class6-4.NET
+description: Stay simple. Stay NexT.
 favicon: 
 banner: /imgs/head.jpg
 rss: 
@@ -18,6 +18,8 @@ menu:
     child:
         关于本站:
           url: /about
+  班级条例:
+    url: /rules
 
 # 社交图标
 account:
