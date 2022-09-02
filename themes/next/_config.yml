@@ -36,7 +36,8 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+scheme: Pisces
+#Muse,Mist,Pisces,Gemini
 #scheme: Mist
 #scheme: Pisces
 #scheme: Gemini
