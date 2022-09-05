@@ -1,3 +1,66 @@
+{%- if theme.zchat.enable %}
+  <a style="position: fixed;bottom: 2px;left: 2px;" href="javascript:show()">Open Chat</a>
+  <html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <style type="text/css">
+          #login
+          {
+              display:none;
+              border:3px solid purple;
+              opacity: 0.9;
+              width:50%;
+              height: 100%;
+              position:absolute;/*让节点脱离文档流,我的理解就是,从页面上浮出来,不再按照文档其它内容布局*/
+              right:0px;
+              top: 0px;
+              z-index:2;/*个人理解为层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/
+              background: white;
+              transform: translateY(10);
+              box-shadow: 7px 7px 10px 7px grey;
+              transition-property: display;
+              transition-duration: 2s 1ms;
+          }
+          #over
+          {
+              width: 100%;
+              height: 100%;
+              filter:alpha(opacity=80);
+              display: none;
+              position:absolute;
+              top:0;
+              left:0;
+              z-index:1;
+              /*background: silver;*/
+          }
+      </style>
+  </head>
+  <body>
+  <div id="login" style="display: none;">
+      <a href="javascript:hide()">关闭</a>
+      <iframe id="m" src="http://chattest.eu5.org/initw.php" style="border-width: 0px;height: 100%;width: 100%;"></iframe>
+  </div>
+  <div id="over" style="display: none;"></div>
+
+  <script type="text/javascript">
+  
+      function show()
+      {
+          var login = document.getElementById('login');
+          var over = document.getElementById('over');
+          login.style.display = "block";
+          over.style.display = "block";
+          
+      }
+      function hide()
+      {
+          var login = document.getElementById('login');
+          var over = document.getElementById('over');
+          login.style.display = "none";
+          over.style.display = "none";
+      }
+  </script>
+  </body></html>
+{%- endif %}
 {%- if theme.footer.beian.enable %}
   <div class="beian">
     {{- next_url('https://beian.miit.gov.cn', theme.footer.beian.icp + ' ') }}
@@ -75,9 +138,8 @@
 {%- endif %}
 
 {%- if theme.footer.powered %}
-  <div class="powered-by">
-    {%- set next_site = 'https://theme-next.js.org' if theme.scheme === 'Gemini' else 'https://theme-next.js.org/' + theme.scheme | lower + '/' %}
-    {{- __('footer.powered', next_url('https://hexo.io', 'Hexo') + ' & ' + next_url(next_site, 'NexT.' + theme.scheme)) }}
+  <div class="Designed-by">
+    {{- __('footer.powered', next_url('https://ginoblog.github.io', 'Ginozhang') + '&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAuthor: ' + next_url("/", 'Class 6-4')+" Theme: NexT") }}
   </div>
 {%- endif %}
 

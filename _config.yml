@@ -7,14 +7,14 @@ title: Class 6-4.NET
 subtitle: 'Stay simple. Stay NexT.'
 description: ''
 keywords:
-author: GinoZhang
-language: en
+author: Class 6-4
+language: zh-ZDY
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://example.com
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -103,3 +103,21 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# live2d
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
+  model:
+    use: live2d-widget-model-hijiki
+  display:
+    position: left
+    width: 150
+    height: 300
+  mobile:
+    show: true

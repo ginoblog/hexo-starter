@@ -1,0 +1,57 @@
+---
+title: <i align="center" class="far fa-handshake postheader" aria="hidden">&nbspRules</i>
+---
+<!DOCTYPE html>
+<head>
+    <meta charset="utf8"/>
+    <style>
+        h1{
+            justify-content: center;
+        }
+        pre{
+            padding: 5px;
+            color: #7f87ff;
+        }
+        iframe{
+            position: relative;
+            left: -50px;
+            transform: scale(0.9);
+            width: 90%;
+            height: 300%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Three Golden Rules</h1>
+    <details>
+        <summary><b>1. </b>Respect others</summary>
+        <pre>Always be respectful to others, for example, <br>when others are speaking you need to keep quiet.</pre>
+    </details>
+    <details>
+        <summary><b>2. </b>Learn efficiently and eagerly</summary>
+        <pre>Always learn with joy, not forced by others.<br>Focusing is necessary to increase the learning <br>efficiency.</pre>
+    </details>
+    <details>
+        <summary><b>3. </b>Be friendly</summary>
+        <pre>Be friendly to others, no bad words, insults,<br>or fighting.</pre>
+    </details>
+    <script>
+        function setIframeHeight(iframeId){
+            var cwin = document.getElementById(iframeId); 
+            if (document.getElementById){
+                if (cwin && !window.opera){
+                    if (cwin.contentDocument && cwin.contentDocument.body.offsetHeight){
+                        cwin.height = cwin.contentDocument.body.offsetHeight + 20; //FF NS 
+                    }
+                    else if(cwin.Document && cwin.Document.body.scrollHeight){
+                        cwin.height = cwin.Document.body.scrollHeight + 10;//IE 
+                    }
+                }else{
+                    if(cwin.contentWindow.document && cwin.contentWindow.document.body.scrollHeight) 
+                    cwin.height = cwin.contentWindow.document.body.scrollHeight;//Opera 
+                }
+            } 
+        };
+    </script>
+</body>
