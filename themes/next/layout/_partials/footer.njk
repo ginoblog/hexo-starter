@@ -1,20 +1,21 @@
 {%- if theme.zchat.enable %}
-  <a style="position: fixed;bottom: 2px;left: 2px;" href="javascript:show()">Open Chat</a>
+  <a style="position: fixed;bottom: 2px;left: 2px;background-image: transparent; border-width: 2px!important; border-left-style: 2px solid black;" href="javascript:show()">Open Chat</a>
   <html><head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <style type="text/css">
           #login
           {
               display:none;
-              border:3px solid purple;
-              opacity: 0.9;
+              border:2px solid #BBBBBB;
+              /*opacity: 1;*/
+              /*overflow-y: auto;*/
               width:50%;
               height: 100%;
               position:absolute;/*让节点脱离文档流,我的理解就是,从页面上浮出来,不再按照文档其它内容布局*/
               right:0px;
               top: 0px;
               z-index:2;/*个人理解为层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/
-              background: white;
+              background: rgba(250,250,250,0.7);
               transform: translateY(10);
               box-shadow: 7px 7px 10px 7px grey;
               transition-property: display;
@@ -32,12 +33,40 @@
               z-index:1;
               /*background: silver;*/
           }
+          :root{
+            --waline-border: 1px solid black;
+          }
       </style>
   </head>
   <body>
   <div id="login" style="display: none;">
-      <a href="javascript:hide()">关闭</a>
-      <iframe id="m" src="http://chattest.eu5.org/initw.php" style="border-width: 0px;height: 100%;width: 100%;"></iframe>
+      <button onclick="hide()" style="position: relative;top: 3px;right: -46%!important;border-width: 0px;"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></button>
+      <head>
+      <!-- ... -->
+      <!-- 脚本文件 -->
+      <!--script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script-->
+      <script src="js/waline.js"></script>
+      <!--link
+        rel="stylesheet"
+        href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+      /-->
+      <link rel="stylesheet" href="css/waline.css"/>
+      <!-- ... -->
+    </head>
+    <body>
+      <!-- ... -->
+      <div id="waline"></div>
+      <script>
+        Waline.init({
+          el: '#waline',
+          serverURL: 'https://chatsys1.ignorelist.com',
+          emoji: [
+            '//unpkg.com/@waline/emojis@1.1.0/tw-emoji',
+            '//unpkg.com/@waline/emojis@1.1.0/bilibili'
+          ]
+        });
+      </script>
+    </body>
   </div>
   <div id="over" style="display: none;"></div>
 
@@ -59,7 +88,7 @@
           over.style.display = "none";
       }
   </script>
-  </body></html>
+</body></html>
 {%- endif %}
 {%- if theme.footer.beian.enable %}
   <div class="beian">
