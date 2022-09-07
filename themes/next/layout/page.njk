@@ -10,8 +10,10 @@
     {{- __('title.tag') + page_title_suffix }}
   {%- elif page.type === 'schedule' and not page.title %}
     {{- __('title.schedule') + page_title_suffix }}
-  {%- else %}
+  {%- elif page.top === false %}
     {{- page.title + page_title_suffix }}
+  {%- else %}
+    {{- page.top + page_title_suffix}}
   {%- endif %}
 {% endblock %}
 

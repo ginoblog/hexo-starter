@@ -4,7 +4,7 @@
 
 # Site
 title: Class 6-4.NET
-subtitle: 'Stay simple. Stay NexT.'
+subtitle: 'Champions 4ever.'
 description: ''
 keywords:
 author: Class 6-4
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://class6-4.err.evv,evv
 permalink: :year/:month/:title/
 permalink_defaults:
 pretty_urls:
