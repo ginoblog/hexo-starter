@@ -576,7 +576,7 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
-  active:
+  active: changyan
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
   # Lazyload all comment systems.
@@ -611,9 +611,9 @@ disqusjs:
 # Changyan
 # For more information: https://changyan.kuaizhan.com
 changyan:
-  enable: false
-  appid:
-  appkey:
+  enable: true
+  appid: cywcP8MBN
+  appkey: prod_60d6e46bd57aac75974a92c3afea0340
 
 # LiveRe comments system
 # You can get your uid from https://livere.com/insight/myCode (General web site)
