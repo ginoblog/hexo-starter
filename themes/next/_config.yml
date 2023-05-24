@@ -107,6 +107,7 @@ menu:
   #聊天: /chats/ || fa fa-commenting
   #commonweal: /404/ || fa fa-heartbeat
   公益: /thanks.html || fa fa-heartbeat
+  恶搞: /funny || fa fa-star
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
